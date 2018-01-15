@@ -23,9 +23,8 @@ Soldier.prototype.attack = function() {
 
 // Viking
 function Viking(name, health, strength) {
+  Soldier.call(this, health, strength);
   this.name = name;
-  this.health = health;
-  this.strength = strength;
   this.m = "act of combat";
 }
 
@@ -43,8 +42,7 @@ Viking.prototype.receiveDamage = function(damage) {
 
 // Saxon
 function Saxon(health, strength) {
-  this.health = health;
-  this.strength = strength;
+  Soldier.call(this, health, strength);
   this.name = "A Saxon";
   this.m = "combat";
 
